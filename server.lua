@@ -1,18 +1,18 @@
-function cekilis(thePlayer, cmd, arg)
+function event(thePlayer, cmd, arg)
 local randomPlayer = getRandomPlayer()
 if getElementData(thePlayer, "account:username") == "USERNAME" then
     if not arg then
-        outputChatBox("[!]#ffffff /"..cmd.." [baslat]", thePlayer, 255, 194, 14, true)    
+        outputChatBox("[!]#ffffff /"..cmd.." [start]", thePlayer, 255, 194, 14, true)    
     else    
-        if arg == "baslat" then
-             outputChatBox("[!] #FFFFFFÇekiliş döngüsü başlatıldı.", getRootElement(), 0, 255, 0, true)
+        if arg == "start" then
+             outputChatBox("[!] #FFFFFFRandom player selection is started.", getRootElement(), 0, 255, 0, true)
             setTimer(function(thePlayer)
-             outputChatBox("[!] #FFFFFF"..getPlayerName(randomPlayer).." çekilişi kazandı.", getRootElement(), 0, 255, 0, true)
+             outputChatBox("[!] #FFFFFF"..getPlayerName(randomPlayer).." won the lottery.", getRootElement(), 0, 255, 0, true)
             end, 4000, 1, thePlayer)            
         end                
     end
 else
-    outputChatBox ( "[!] #FFFFFFBu yetkiye sahip değilsin.", thePlayer, 0, 255, 0, true)
+    outputChatBox ( "[!] #FFFFFFYou don't have this authority.", thePlayer, 0, 255, 0, true)
 end
 end            
-addCommandHandler("cekilisbaslat", cekilis)
+addCommandHandler("randomevent", event)
