@@ -1,4 +1,4 @@
 <meta>
     <info author="FurkanOzturk" name="Event" description="Random person selection function." type="script" />
-    <script src="server.lua" />
+    <script src="server.lua" type="server" />
 </meta>
