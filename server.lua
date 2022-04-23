@@ -1,7 +1,7 @@
 function event(thePlayer, cmd, arg)
 local randomPlayer = getRandomPlayer() -- get random player :)
 local accName = getAccountName(getPlayerAccount(thePlayer)) -- get his account name
-if isObjectInACLGroup ("user."..accName, aclGetGroup("Admin") then -- Does he have access to Admin functions?
+if isObjectInACLGroup ("user."..accName, aclGetGroup("Admin")) then -- Does he have access to Admin functions?
     if not arg then -- you should use the start argument
         outputChatBox("[!]#ffffff /"..cmd.." [start]", thePlayer, 255, 194, 14, true)    
     else    
